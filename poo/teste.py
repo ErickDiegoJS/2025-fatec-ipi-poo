@@ -1,3 +1,2 @@
-from pool.calculadora import somar
-
-print( somar(1, 2))
+import calculadora
+print (calculadora.somar(1, 2))
