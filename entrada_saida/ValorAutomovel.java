@@ -4,7 +4,7 @@ public class ValorAutomovel{
         //declaração de variaveis
         double a, resultado;
         //entrada e saida
-        a = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de fabrica do automovel:"));
+        a = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de fabrica do automovel: "));
         //processamento
         resultado = a + ((a/100) * 45) + ((a/100) * 28);
         //saida
