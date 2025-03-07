@@ -1,12 +1,16 @@
-class LivroDeNotas{
+public class TesteLivroDeNotas{
+    public static void main(String... args){
+        //1. construir um livro de notas
+        LivroDeNotas livroDeNotas = new LivroDeNotas();
+        //livroDeNotas.nomeDaDisciplina = "POO";
+        livroDeNotas.setNomedaDisciplina("POO");
 
-    private String nomeDaDisciplina = null;
+        LivroDeNotas livro2 = new LivroDeNotas();
+        //livro2.nomeDaDisciplina = "BD";
+        livro2.setNomedaDisciplina("BD");
 
-    void setNomedaDisciplina(String nomeDaDisciplina){
-        this.nomeDaDisciplina = nomeDaDisciplina;
-    }
-
-    void exibirMensagem(){
-        System.out.println("Bem Vindo ao Livro de Notas de " + nomeDaDisciplina);
+        //2. acionar comportamento de exibir mensagem de boas vindas
+        livroDeNotas.exibirMensagem();
+        livro2.exibirMensagem();
     }
 }
