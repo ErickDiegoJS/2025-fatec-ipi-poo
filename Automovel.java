@@ -1,31 +1,50 @@
-public class Carro{
+class Carro{
 
-    private String marcaDoCarro;
-    private int numeroDePortas;
+    private String placaDoCarro;
+    private int anoDoVeiculo;
 
-    public Carro(String marcaDoCarro, int numeroDePortas){
-        this.setMarcaDoCarro(marcaDoCarro);
-        this.setNumeroDePortas(numeroDePortas);
-    }
-
-    public void setMarcaDoCarro(String marcaDoCarro){
-        this.marcaDoCarro = marcaDoCarro;
-    }
-    public void setNumeroDePortas(int numeroDePortas){
-        this.numeroDePortas = numeroDePortas;
+    public Carro(String placaDoCarro){
+        setplacaDoCarro(placaDoCarro);
     }
 
-    public String getMarcaDoCarro(){
-        return this.marcaDoCarro;
-    }
-    public int getNumeroDePortas(){
-        return numeroDePortas;
+    public Carro(int anoDoVeiculo){
+        setanoDoVeiculo(anoDoVeiculo);
     }
 
-    public void buzinar(){
-        System.out.println("Beep beep!");
+    void setplacaDoCarro(String placaDoCarro){
+        placaDoCarro = placaDoCarro;
     }
-    public void acelerar(){
-        System.out.println("Vrum vrum!");
+    void setanoDoVeiculo(int anoDoVeiculo){
+        anoDoVeiculo = anoDoVeiculo;
+    }
+
+    public String getplacaDoCarro(){
+        return placaDoCarro;
+    }
+
+    public int getanoDoVeiculo(){
+        return anoDoVeiculo;
+    }
+
+    public void abrirPortaMalas(){
+        System.out.println("abrindo porta malas");
+    }
+
+    public void abrirJanelas(){
+        System.out.println("abrindo janelas");
+    }
+
+}
+======================================================
+public class TesteExercicio1{
+    public static void main(String... args){
+        carro1 = new carro("fusca");
+        carro2 = new carro("gol");
+
+        carro1.abrirJanelas();
+        carro2.abrirPortaMalas();
+
+        System.out.println("Ano do carro: " + carro1.getanoDoVeiculo());
+        System.out.println("Placa do carro: " + carro2.getplacaDoCarro());
     }
 }
