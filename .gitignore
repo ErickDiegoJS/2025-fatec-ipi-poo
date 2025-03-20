@@ -1,2 +1,2 @@
 *.class
-pycache 
+__pycache__ 
