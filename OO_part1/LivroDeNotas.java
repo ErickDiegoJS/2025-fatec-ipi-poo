@@ -4,7 +4,7 @@ class LivroDeNotas{
 
     //construtor padrão(lista de parametros vazia)
     public LivroDeNotas(String nomeDaDisciplina){
-        this.nomeDaDisciplina(nomeDaDisciplina);
+        this.setNomedaDisciplina(nomeDaDisciplina);
         //System.out.println("Construindo um liro de notas");
     }
 

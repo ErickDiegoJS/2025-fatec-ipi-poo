@@ -15,10 +15,10 @@ public class JogoV2 {
             //3:dormir
             //descobre a quantidade de metodos que a classe possui
             //Class<?> clazz = Personagem.class;
-        Method[] metodosPublicos = clazz.getMethods();
-        System.out.println("Numero de metodos publicos:" + metodosPublicos.length);
-        Method [] metodosDeclarados = clazz.getDeclaredMethods();
-        System.out.println("Numero de metodos declarados:" + metodosDeclarados.length);
+            // Method[] metodosPublicos = clazz.getMethods();
+            // System.out.println("Numero de metodos publicos:" + metodosPublicos.length);
+            // Method [] metodosDeclarados = clazz.getDeclaredMethods();
+            // System.out.println("Numero de metodos declarados:" + metodosDeclarados.length);
             var oQueFazer = 1 + gerador.nextInt(3);//[0, 32) -> [1, 3)
             switch(oQueFazer){
                 case 1:
