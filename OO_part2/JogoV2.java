@@ -14,7 +14,11 @@ public class JogoV2 {
             //2:comer 
             //3:dormir
             //descobre a quantidade de metodos que a classe possui
-            //var qtdMetodos = Personagem.getMethods().length;
+            //Class<?> clazz = Personagem.class;
+        Method[] metodosPublicos = clazz.getMethods();
+        System.out.println("Numero de metodos publicos:" + metodosPublicos.length);
+        Method [] metodosDeclarados = clazz.getDeclaredMethods();
+        System.out.println("Numero de metodos declarados:" + metodosDeclarados.length);
             var oQueFazer = 1 + gerador.nextInt(3);//[0, 32) -> [1, 3)
             switch(oQueFazer){
                 case 1:
