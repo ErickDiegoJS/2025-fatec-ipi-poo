@@ -1,32 +1,39 @@
 import java.util.Random;
+import java.lang.reflect.*;
 public class JogoV2 {
     public static void main(String[] args) throws Exception{
         var gerador = new Random();
+        var pessoa1 = new Personagem("Lebron", 10, 10, 0);
         var pessoa2 = new Personagem();
-
-        pessoa2.nome= "Mario";
+        var pessoa3 = new Personagem("Soneca", 10, 0, 10);
+        //vetor que armazena um array de personagens, os três existentes
+        Personagem [] personagens = {pessoa1, pessoa2, pessoa3};
         while(true){
+            var quemVaiJogar = gerador.nextInt(personagens.length);
             //1:cacar 
             //2:comer 
             //3:dormir
+            //descobre a quantidade de metodos que a classe possui
+            //var qtdMetodos = Personagem.getMethods().length;
             var oQueFazer = 1 + gerador.nextInt(3);//[0, 32) -> [1, 3)
             switch(oQueFazer){
                 case 1:
-                    pessoa2.cacar();
+                    personagens[quemVaiJogar].cacar();
                     break;
                 case 2:
-                    pessoa2.comer();
+                    personagens[quemVaiJogar].comer();
                     break;
                 case 3:
-                    pessoa2.dormir();
+                    personagens[quemVaiJogar].dormir();
                     break;
 
             }
-            System.out.println(pessoa2);
+            System.out.println(personagens[quemVaiJogar]);
             System.out.println("\n**************************\n");
             
             Thread.sleep(2000);
         }
+
     }
     
 }
