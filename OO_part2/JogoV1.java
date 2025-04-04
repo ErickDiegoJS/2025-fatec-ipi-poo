@@ -4,7 +4,7 @@ public class JogoV1 {
         //compilador de inferencia de tipo
         //var(feito pelo compilador)
         var pessoa1 = new Personagem();
-        pessoa1.nome = "Marcos";
+        //pessoa1.nome = "Marcos";
         pessoa1.mensagemInicial();
         //10, 0, 0
         pessoa1.cacar();
