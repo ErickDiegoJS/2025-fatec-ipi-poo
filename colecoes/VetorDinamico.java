@@ -1,17 +1,19 @@
 
 package colecoes;
 
-public class VetorDinamico{
+//polimorfismo parametrico
+public class VetorDinamico<Type>{
     //LIMIAR_INFERIOR representa a quantidade minima de tamanho do vetor
   private static final int LIMIAR_INFERIOR = 4;
-  private int [] elementos;
+  private Type [] elementos;
   private int quantidade;
   private int capacidade;
 
   VetorDinamico(){
     quantidade = 0;
     capacidade = LIMIAR_INFERIOR;
-    elementos =  new int[capacidade];
+    //elementos =  new int[capacidade];
+    elementos = (Type[]) new Object[capacidade];
   }
 
   public boolean estaCheio(){
@@ -23,19 +25,23 @@ public class VetorDinamico{
     return quantidade == 0;
   }
 
+  private void redimencionar(double fator){
+    //alocando um vetor com a capacidade apropiada
+    //int [] aux = new int[(int)(capacidade*fator)];
+    Type [] aux = (Type[]) new Object[capacidade];
+    //copiar todos os elementos de um vetor para outro
+    for(int i=0; i<quantidade; i++){
+        aux[i] = elementos[i];
+    }
+    //atualizar a capacidade
+    capacidade =(int)(capacidade*fator);
+    //fazer o ponteiro elementos apontar para aux
+    elementos = aux;
+  }
 
-
-  public void adicionar(int e){
+  public void adicionar(Type e){
     if(estaCheio()){
-        //redimencionar o vetor
-        int [] aux = new int [capacidade*=2];
-        //copia elementos de um vetor para outro
-        for(int i=0; i<quantidade; i++){
-            aux[i] = elementos[i];
-
-            capacidade*=2;
-            elementos = aux;
-        }
+        redimencionar(2);
     }
     elementos[quantidade++] = e;
   }
@@ -44,17 +50,9 @@ public class VetorDinamico{
     if(!estaVazio()){
         quantidade --;
         if(quantidade == capacidade/4 && capacidade > LIMIAR_INFERIOR){
-            int [] aux = new int [capacidade/2];
-            for(int i=0; i<quantidade; i++){
-                aux[i] = elementos[i];
-                capacidade/=2;
-
-                elementos = aux;
-            }
+            redimencionar(0.5);
         }
-    }
-    
-    
+    } 
   }
 
   public String toString(){
@@ -72,8 +70,4 @@ public class VetorDinamico{
     }
     return sb.toString();
   }
-
-
-
-
 }
