@@ -46,10 +46,10 @@ class trackz implements Comparable<trackz>{
 
 class AvaliaçaoComparator implements Comparator<trackz>{
     @Override
-    public int compare (Track t1, Track t2){
-        if(t1.getavaliacao() > t2.getavaliacao){
+    public int compare (trackz t1, trackz t2){
+        if(t1.getAvaliacao() > t2.getAvaliacao()){
             return -1;}
-        if(t1.getavaliacao() == t2.getavaliacao){
+        if(t1.getAvaliacao() == t2.getAvaliacao()){
             return t1.compareTo(t2);}
         return 1;
     }

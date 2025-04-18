@@ -1,4 +1,4 @@
-package sobrecarga;
+package Sobrecarga;
 
 public class Pessoa {
     private String nome;

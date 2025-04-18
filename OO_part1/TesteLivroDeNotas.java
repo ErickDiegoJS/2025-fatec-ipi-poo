@@ -5,11 +5,7 @@ public class TesteLivroDeNotas {
         //livroDeNotas.nomeDaDisciplina = "POO";
         //jaclivroDeNotas.setNomedaDisciplina("POO");
 
-<<<<<<< HEAD
-        System.out.println(livroDeNotas.getClass());
-=======
         System.out.println(livroDeNotas.getNomeDaDisciplina());
->>>>>>> 835fe188cab877dbe6f42f106f87cdbbab48a5d2
 
         //LivroDeNotas livro2 = new LivroDeNotas();
         //livro2.nomeDaDisciplina = "BD";
