@@ -1,13 +1,13 @@
 package colecoes;
 
-class Veiculo(
+class Veiculo {
     String placa;
     int ano;
-)
 
-Veiculo(String placa, int ano){
-    this.placa = placa;
-    this.ano = ano;
+    Veiculo(String placa, int ano){
+        this.placa = placa;
+        this.ano = ano;
+    }
 }
 
 public class BasicosDeVetores3 {

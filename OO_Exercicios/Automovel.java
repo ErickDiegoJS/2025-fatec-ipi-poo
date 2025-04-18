@@ -12,10 +12,10 @@ class Carro{
     }
 
     void setplacaDoCarro(String placaDoCarro){
-        placaDoCarro = placaDoCarro;
+        this.placaDoCarro = placaDoCarro;
     }
     void setanoDoVeiculo(int anoDoVeiculo){
-        anoDoVeiculo = anoDoVeiculo;
+        this.anoDoVeiculo = anoDoVeiculo;
     }
 
     public String getplacaDoCarro(){

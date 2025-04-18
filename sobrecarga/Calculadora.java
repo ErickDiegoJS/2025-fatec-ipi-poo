@@ -1,10 +1,10 @@
-package sobrecarga;
+package Sobrecarga;
 
 public class Calculadora {
 
-    // public long somar(long a, long b){
-    //     return a + b;
-    // }
+    public long somar(long a, long b){
+        return a + b;
+    }
 
     // public double somar(long a, long b){
     //     return a + b;
