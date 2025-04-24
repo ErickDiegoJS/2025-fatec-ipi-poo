@@ -3,10 +3,9 @@ package Sobrecarga;
 public class Pessoa {
     private String nome;
     private int idade;
-    private char sexo;//Character
-
+    private char sexo;
     public Pessoa(){
-       System.out.println("Padrão..."); 
+        System.out.println("padrão");
     }
 
     public Pessoa(String nome, int idade, char sexo){
@@ -19,28 +18,28 @@ public class Pessoa {
     public Pessoa(String nome, int idade){
         this(nome, idade, '\0');
         System.out.println("String, int");
+        
         // this.nome = nome;
         // this.idade = idade;
     }
 
     public Pessoa(int idade, String nome){
         this(nome, idade);
+        //utiliza dos construdores acima
         System.out.println("int, String");
-        // this.nome = nome;
         // this.idade = idade;
+        // this.nome = nome;
     }
 
     public Pessoa(String nome){
-        // this.nome = nome;
         this(nome, 0);
-        System.out.println("String");        
+        System.out.println("String");
+        //this.nome = nome;
     }
 
     public Pessoa(int idade){
-        // this.idade = idade;
-        this(idade, null);
+        this(15, null);
         System.out.println("int");
     }
-
-
+    
 }
