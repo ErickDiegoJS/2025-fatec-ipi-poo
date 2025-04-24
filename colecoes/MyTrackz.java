@@ -27,7 +27,7 @@ class trackz implements Comparable<trackz>{
         this.titulo = titulo;
     }
     public String toString(){
-        return String.format("Titulo %s, Avaliação %d",titulo, avaliacao);
+        return String.format("Titulo %s, Avaliação %d", titulo, avaliacao);
     }
     @Override
     // o metodo compareTo retorna o metodo compareTo de strings que irá ordenar por nome\titulo
