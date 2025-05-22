@@ -1,5 +1,5 @@
 Anotações:
-Prova: git commit, tag.../ apostila 006, 008, 014/ vetores e java
+(https://mvnrepository.com/)
 
 para usar o metodo sleep:
 se livrar da exeção-  throws InterruptedException
