@@ -1,0 +1,5 @@
+br\fatec\ConnectionFactory.class
+br\fatec\Pessoa.class
+br\fatec\PessosaDAO.class
+br\fatec\App.class
+br\fatec\Principal.class

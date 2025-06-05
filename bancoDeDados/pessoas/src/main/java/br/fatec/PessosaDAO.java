@@ -47,15 +47,23 @@ public class PessosaDAO {
         //fazer o methodo e fazer o case correspondente na classe principal
         //removendo pelo codigo apenas
         //a pessoa que vai chegar via parametro somente o codigo
+        var sql ="DELETE FROM tb_pessoa WHERE cod_pessoa = ?";
+        try(var conexao = ConnectionFactory.obterConexao(); 
+        var ps = conexao.prepareStatement(sql)){
+            ps.setInt(1, pessoa.getCodigo());
+            ps.execute();
+        }
+
+
     }
     public List<Pessoa> listar() throws Exception{
         var pessoas = new ArrayList<Pessoa>();
         var sql = "Select * FROM tb_pessoa ORDER BY nome";
-        try{
+        try(
             var conexao = ConnectionFactory.obterConexao();
             var ps = conexao.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-        }{    // lidar com o resultado
+        ) {    // lidar com o resultado
             while(rs.next()){
                 var codigo = rs.getInt("codigo: ");
                 var nome = rs.getString("nome: ");

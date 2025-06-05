@@ -24,4 +24,7 @@ public class Pessoa {
         this.fone = fone;
         this.email = email;
     }
+    public Pessoa(int codigo){
+        this.codigo = codigo;
+    }
 }

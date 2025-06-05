@@ -34,6 +34,7 @@ public class Principal {
                         var codigo = Integer.parseInt(JOptionPane.showInputDialog("Codigo: "));
                         var pessoa = new Pessoa(codigo, nome, fone, email);
                         var dao = new PessosaDAO();
+                        dao.atualizar(pessoa);
                         JOptionPane.showMessageDialog(null, "Atualização ok!");
                     }
                     catch(Exception e){
@@ -43,7 +44,18 @@ public class Principal {
                     break;
                 }
                 case 3:{
-                    //fazer...
+                    try{
+                        var codigo = Integer.parseInt(JOptionPane.showInputDialog("Codigo: "));
+                        var pessoa = new Pessoa(codigo);
+                        var dao = new PessosaDAO();
+                        dao.remover(pessoa);
+                        JOptionPane.showMessageDialog(null, "Excluido ok!");
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                        JOptionPane.showMessageDialog(null, "Sistema indisponivel");
+                    }
+                    break;
                 }
                 case 4:{
                     try {
@@ -51,7 +63,8 @@ public class Principal {
                         for(Pessoa p: new PessosaDAO().listar()){
                             sb.append(p).append("\n");
                         }
-                        JOptionPane.showMessageDialog(null, new PessosaDAO().listar());
+                        JOptionPane.showMessageDialog(null, sb);
+                        // JOptionPane.showMessageDialog(null, new PessosaDAO().listar());
                     } catch (Exception e) {
                         e.printStackTrace();
                         JOptionPane.showMessageDialog(null, "Sistema indisponivel");
